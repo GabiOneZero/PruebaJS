@@ -61,13 +61,15 @@ function newTask(selectedList, taskName, taskTime) {
         alert("You must write something!");
       } else {
         newTaskElement.firstElementChild.innerHTML = taskName 
-        newTaskElement.firstElementChild.nextSibling.innerHTML = taskTime    
-        listToAdd.appendChild(newTaskElement);
+        newTaskElement.firstElementChild.nextSibling.innerHTML = taskTime
+		newTaskElement.lastElementChild.firstElementChild.setAttribute("name", selectedList)  
+        console.log(newTaskElement.lastElementChild.firstElementChild.getAttribute("name"))
+		listToAdd.appendChild(newTaskElement);
         newTaskElement.classList.remove("task-list--element")
       }
 
-      taskInput.value = ""
-      timekInput.value = ""
+    //   taskInput.value = ""
+    //   timekInput.value = ""
 }
 
 function removeTask(selfElement) {
@@ -76,9 +78,9 @@ function removeTask(selfElement) {
 }
 
 var columnsArray = taskContainer.children
-console.log("Array")
-console.log(columnsArray)
 function moveRight(selfElement) {
     selfElement.parentElement.parentElement.style.display = "none"
+	console.log("Element")
+	console.log(selfElement)
 }
 
