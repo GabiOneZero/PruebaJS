@@ -1,0 +1,34 @@
+.task-list--element{
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+.task-form{
+    width: 45%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.task-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.task-list{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-list--buttonlist{
+    display: flex;
+    flex-direction: row;
+}
+
+.task-list > button{
+    margin: auto;
+}

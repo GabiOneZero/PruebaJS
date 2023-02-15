@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Task Manager</title>
+	</head>
+	<body>
+		<h1>Task Manager</h1>
+		<div class="main-container">
+			<div class="task-form">
+				<input type="text" name="task" id="task" placeholder="Task name" />
+				<input type="text" name="time" id="time" placeholder="Est. time" />
+			</div>
+
+			<div id="task-container" class="task-container">
+				<div id="todolist" class="task-list">
+					<button id="todo-btn" class="outline primary" name="todo-btn">+</button>
+					<p class="task-list--title">TO DO</p>
+					<ul id="todo" class="task-list--list"></ul>
+				</div>
+				<div id="in-progresslist" class="task-list">
+					<button id="inprogress-btn" class="outline primary">+</button>
+					<p class="task-list--title">In Progress</p>
+					<ul id="in-progress" class="task-list--list"></ul>
+				</div>
+				<div id="testedlist" class="task-list">
+					<button id="tested-btn" class="outline primary">+</button>
+					<p class="task-list--title">To Be Tested</p>
+					<ul id="tested" class="task-list--list"></ul>
+				</div>
+				<div id="donelist" class="task-list">
+					<button id="done-btn" class="outline primary">+</button>
+					<p class="task-list--title">Done</p>
+					<ul id="done" class="task-list--list"></ul>
+				</div>
+			</div>
+		</div>
+
+		<li id="templateTask" class="task-list--element">
+			<p></p>
+            <span></span>
+			<div class="task-list--buttonlist">
+				<button class="leftTask-btn"><</button>
+				<button id="removeTask-btn" onclick="removeTask(this)">X</button>
+				<button class="rightTask-btn">></button>
+			</div>
+		</li>
+		<script src="script.js"></script>
+	</body>
+</html>
